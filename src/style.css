@@ -153,8 +153,6 @@ img.pixelated {
   @apply min-w-8 max-w-8 max-h-8 w-full;
 }
 
-// Dark
-
 .dark .reverse {
   @apply invert-100;
 }
@@ -174,8 +172,6 @@ img.pixelated {
 .dark .logo {
   @apply invert-100;
 }
-
-// Table
 
 table thead tr th,
 table tbody tr td {
