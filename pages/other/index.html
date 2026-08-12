@@ -1,147 +1,91 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    {{> head}}
-    <title>notchris - other</title>
-  </head>
-  <body>
-    <div class="flex flex-col w-full min-h-full">
-      {{> header }}
-      <div class="content-title text-left w-full">
-        <div class="px-0 py-4 flex flex-col gap-2">
-          <div class="text-3xl font-semibold">Other Stuff</div>
-          <div class="w-full bg-(--color-divider) h-0.5"></div>
-        </div>
-      </div>
-      <div class="content-section flex-1 m-0! lg:m-auto! w-full">
-        <div
-          class="w-full flex flex-col md:flex-row justify-between gap-10 flex-1"
-        >
-          <div class="w-full flex flex-col gap-10">
-            <!-- Title -->
-            <div class="w-full">
-              <div class="text-xl font-normal">
-                Random things that don't fit elsewhere.
-              </div>
-            </div>
+<html lang='en'>
+	<head>
+		{{> head
+			title='Other Stuff — notchris'
+			description='>Random art and things that don\'t fit elsewhere'
+			canonical='https://notchris.net/audio/twitch/about'
+		}}
+	</head>
+	<body>
+		<div class='flex flex-col w-full min-h-full'>
+			{{> header}}
+			<div class='content-title text-left w-full'>
+				<div class='px-0 py-4 flex flex-col gap-2'>
+					<div class='text-3xl font-semibold'>Other Stuff</div>
+					<div class='w-full bg-(--color-divider) h-0.5'></div>
+				</div>
+			</div>
+			<div class='content-section flex-1 m-0! lg:m-auto! w-full'>
+				<div class='w-full flex flex-col md:flex-row justify-between gap-10 flex-1'>
+					<div class='w-full flex flex-col gap-10'>
+						<!-- Title -->
+						<div class='w-full'>
+							<div class='text-xl font-normal'>Random things that don't fit elsewhere.</div>
+						</div>
 
-            <!-- Content-->
+						<!-- Content-->
 
-            <div class="w-full flex flex-col gap-20">
-              <section>
-                <h1 class="text-2xl font-bold source-sans-bold pb-2">
-                  Pixel Art
-                </h1>
-                <p class="mb-10">
-                  I enjoy really small art. These are a bunch of random drawings
-                  made with
-                  <a
-                    target="_blank"
-                    href="https://www.aseprite.org/"
-                    class="text-link"
-                    >Aseprite</a
-                  >.
-                </p>
+						<div class='w-full flex flex-col gap-20'>
+							<section>
+								<h1 class='text-2xl font-bold source-sans-bold pb-2'>Pixel Art</h1>
+								<p class='mb-10'>
+									I enjoy really small art. These are a bunch of random drawings made with
+									<a class='text-link' target='_blank' href='https://www.aseprite.org/'>Aseprite</a>.
+								</p>
 
-                <div class="grid grid-cols-3">
-                  <div class="flex flex-col items-center justify-center">
-                    <img
-                      class="pixelated w-full"
-                      src="/images/pixelart/Pupus.png"
-                    />
-                  </div>
-                  <div class="flex flex-col items-center justify-center">
-                    <img
-                      class="pixelated w-full"
-                      src="/images/pixelart/BaitShop.png"
-                    />
-                  </div>
-                  <div class="flex flex-col items-center justify-center">
-                    <img
-                      class="pixelated w-full"
-                      src="/images/pixelart/DuckPond.png"
-                    />
-                  </div>
-                  <div class="flex flex-col items-center justify-center">
-                    <img
-                      class="pixelated w-full"
-                      src="/images/pixelart/ShootingGame.png"
-                    />
-                  </div>
-                  <div class="flex flex-col items-center justify-center">
-                    <img
-                      class="pixelated w-full"
-                      src="/images/pixelart/Stand.png"
-                    />
-                  </div>
-                  <div class="flex flex-col items-center justify-center">
-                    <img
-                      class="pixelated w-full"
-                      src="/images/pixelart/TicketTent.png"
-                    />
-                  </div>
-                  <div class="flex flex-col items-center justify-center">
-                    <img
-                      class="pixelated w-full scale-50"
-                      src="/images/pixelart/Fruits.png"
-                    />
-                  </div>
-                  <div class="flex flex-col items-center justify-center">
-                    <img
-                      class="pixelated w-full scale-50"
-                      src="/images/pixelart/beaver.png"
-                    />
-                  </div>
-                </div>
-              </section>
+								<div class='grid grid-cols-3'>
+									<div class='flex flex-col items-center justify-center'>
+										<img class='pixelated w-full' src='/images/pixelart/Pupus.png' />
+									</div>
+									<div class='flex flex-col items-center justify-center'>
+										<img class='pixelated w-full' src='/images/pixelart/BaitShop.png' />
+									</div>
+									<div class='flex flex-col items-center justify-center'>
+										<img class='pixelated w-full' src='/images/pixelart/DuckPond.png' />
+									</div>
+									<div class='flex flex-col items-center justify-center'>
+										<img class='pixelated w-full' src='/images/pixelart/ShootingGame.png' />
+									</div>
+									<div class='flex flex-col items-center justify-center'>
+										<img class='pixelated w-full' src='/images/pixelart/Stand.png' />
+									</div>
+									<div class='flex flex-col items-center justify-center'>
+										<img class='pixelated w-full' src='/images/pixelart/TicketTent.png' />
+									</div>
+									<div class='flex flex-col items-center justify-center'>
+										<img class='pixelated w-full scale-50' src='/images/pixelart/Fruits.png' />
+									</div>
+									<div class='flex flex-col items-center justify-center'>
+										<img class='pixelated w-full scale-50' src='/images/pixelart/beaver.png' />
+									</div>
+								</div>
+							</section>
 
-              <section>
-                <h1 class="text-2xl font-bold source-sans-bold pb-2">
-                  Logo / Graphic Design
-                </h1>
-                <p class="mb-10">
-                  I also enjoy really big art. Here are designs I've created for
-                  apparel, albums, and more!
-                </p>
+							<section>
+								<h1 class='text-2xl font-bold source-sans-bold pb-2'>Logo / Graphic Design</h1>
+								<p class='mb-10'>I also enjoy really big art. Here are designs I've created for apparel, albums, and more!</p>
 
-                <div class="grid grid-cols-2 gap-4">
-                  <img
-                    class="w-full"
-                    src="/images/graphicdesign/SNSR_Art.png"
-                  />
-                  <img
-                    class="w-full bg-(--color-dark-gray) p-4"
-                    src="/images/graphicdesign/palm_ggg.png"
-                  />
-                  <img
-                    class="w-full bg-(--color-dark-gray) p-4"
-                    src="/images/graphicdesign/cmlogo.png"
-                  />
-                  <img
-                    class="w-full bg-(--color-dark-gray) p-4"
-                    src="/images/graphicdesign/ncabstract.png"
-                  />
-                  <img
-                    class="w-full bg-(--color-dark-gray) p-4"
-                    src="/images/graphicdesign/megan.png"
-                  />
-                  <img
-                    class="w-full bg-(--color-dark-gray) p-4"
-                    src="/images/graphicdesign/Peckers.png"
-                  />
-                </div>
-              </section>
-            </div>
-          </div>
+								<div class='grid grid-cols-2 gap-4'>
+									<img class='w-full' src='/images/graphicdesign/SNSR_Art.png' />
+									<img class='w-full bg-(--color-dark-gray) p-4' src='/images/graphicdesign/palm_ggg.png' />
+									<img class='w-full bg-(--color-dark-gray) p-4' src='/images/graphicdesign/cmlogo.png' />
+									<img class='w-full bg-(--color-dark-gray) p-4' src='/images/graphicdesign/ncabstract.png' />
+									<img class='w-full bg-(--color-dark-gray) p-4' src='/images/graphicdesign/megan.png' />
+									<img class='w-full bg-(--color-dark-gray) p-4' src='/images/graphicdesign/Peckers.png' />
+								</div>
+							</section>
+						</div>
+					</div>
 
-          <div>
-            <img class="w-full max-w-sm" src="/images/ncgif.gif" />
-          </div>
-        </div>
-      </div>
-      {{> footer }}
-    </div>
+					<div>
+						<img class='w-full max-w-sm' src='/images/ncgif.gif' />
+					</div>
+				</div>
+			</div>
+			{{> footer}}
+		</div>
 
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+		<script type='module' src='/src/main.ts'></script>
+	</body>
 </html>

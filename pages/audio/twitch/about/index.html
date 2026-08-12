@@ -1,80 +1,67 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    {{> head}}
-    <title>notchris - twitch clip song project info</title>
-  </head>
-  <body>
-    <div class="flex flex-col w-full min-h-full">
-      {{> header }} {{> pageHeader title="About Twitch Clip Song Project"}}
-      <div class="content-section w-full flex flex-col gap-4">
-        <p>
-          In 2022, I wanted to improve my music production skills so I started
-          learning how to sample / manipulate audio. I was inspired by
-          electronic artists like <i>Nosaj Thing</i>, <i>Baths</i>,
-          <i>Purity Ring</i>, <i>Dntel</i>, <i>Starkey</i> - who have really
-          cool rhythmic or glitchy vocal effects I admired.
-        </p>
-        <p>
-          I was working on a number of electronic projects at the time, and many
-          of the tracks I made felt empty without vocals. I reached out to a
-          bunch of people on the Twitch Music category, but couldn't find anyone
-          willing to collaborate. Instead, I started making Clips in my friends
-          channels and used those to practice sampling, thus marking the start
-          of the Twitch Clip Song project.
-        </p>
+<html lang='en'>
+	<head>
+		{{> head
+			title='About Twitch Clip Song Project — notchris'
+			description='>Info about the Twitch Clip Song Project and how to commission a song.'
+			canonical='https://notchris.net/audio/twitch/about'
+		}}
+	</head>
+	<body>
+		<div class='flex flex-col w-full min-h-full'>
+			{{> header}}
+			{{> pageHeader
+				title="About Twitch Clip Song Project"
+			}}
+			<div class='content-section w-full flex flex-col gap-4'>
+				<p>
+					In 2022, I wanted to improve my audio production skills so I started learning how to sample / manipulate audio. I was inspired by electronic artists like
+					<i>Nosaj Thing</i>,<i>Baths</i>,<i>Purity Ring</i>,<i>Dntel</i>,<i>Starkey</i>
+					- who have really cool rhythmic or glitchy vocal effects I admired.
+				</p>
+				<p>
+					I was working on a number of electronic projects at the time, and many of the tracks I made felt empty without vocals. I reached out to a bunch of people on the Twitch Music category, but couldn't find anyone willing to collaborate. Instead, I started making Clips in my friends channels and used those to practice sampling, thus marking the start of the Twitch Clip Song project.
+				</p>
 
-        <div class="text-xl font-bold">What is a Twitch Clip Song?</div>
-        <p>
-          A Twitch Clip Song is a...song (usually 1-2 minutes) created using
-          Clips from Twitch. The Clips are sliced up, put into a sampler, and
-          paired with music made by yours truly.
-        </p>
+				<div class='text-xl font-bold'>What is a Twitch Clip Song?</div>
+				<p>A Twitch Clip Song is a...song (usually 1-2 minutes) created using Clips from Twitch. The Clips are sliced up, put into a sampler, and paired with music made by yours truly.</p>
 
-        <hr class="my-3" />
+				<hr class='my-3' />
 
-        <div class="text-xl font-bold">Can I commission a song?</div>
-        <p>
-          Yes! I just ask for a $10 donation via PayPal or Ko-fi. Commissioned
-          songs can take 2-3 days to complete.<br /><br />
-          <a href="mailto:notchris.other@gmail.com" class="text-link font-bold"
-            >Send me an email</a
-          >
-          with:<br />- Your twitch username (or the name a streamer you
-          enjoy)<br />- 3-5 links to clips of your choice<br />- The kind of
-          style song you'd like.
-        </p>
+				<div class='text-xl font-bold'>Can I commission a song?</div>
+				<p>
+					Yes! I just ask for a $10 donation via PayPal or Ko-fi. Commissioned songs can take 2-3 days to complete.
+					<br />
+					<br />
+					<a class='text-link font-bold' href='mailto:notchris.other@gmail.com'>Send me an email</a>
+					with:
+					<br />
+					- Your twitch username (or the name a streamer you enjoy)
+					<br />
+					- 3-5 links to clips of your choice
+					<br />
+					- The kind of style song you'd like.
+				</p>
 
-        <hr class="my-3" />
+				<hr class='my-3' />
 
-        <div class="text-xl font-bold">
-          Can I use a Twitch Clip Song for something?
-        </div>
-        <p>
-          Yes! You can use the songs made for you however you'd like. If you
-          want to credit me, that's super cool of you!
-        </p>
+				<div class='text-xl font-bold'>Can I use a Twitch Clip Song for something?</div>
+				<p>Yes! You can use the songs made for you however you'd like. If you want to credit me, that's super cool of you!</p>
 
-        <hr class="my-3" />
+				<hr class='my-3' />
 
-        <div class="text-xl font-bold">What do you use to make the songs?</div>
-        <p>
-          I use
-          <a
-            class="text-link"
-            target="_blank"
-            href="https://www.reasonstudios.com/"
-            >Propellerhead Reason</a
-          >
-          as my DAW. I either download clips directly from Twitch or record them
-          from VODs using OBS.
-        </p>
+				<div class='text-xl font-bold'>What do you use to make the songs?</div>
+				<p>
+					I use
+					<a class='text-link' target='_blank' href='https://www.reasonstudios.com/'>Propellerhead Reason</a>
+					as my DAW. I either download clips directly from Twitch or record them from VODs using OBS.
+				</p>
 
-        <div class="spacer h-20"></div>
-      </div>
-      {{> footer }}
-    </div>
+				<div class='spacer h-20'></div>
+			</div>
+			{{> footer}}
+		</div>
 
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+		<script type='module' src='/src/main.ts'></script>
+	</body>
 </html>

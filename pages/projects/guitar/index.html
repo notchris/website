@@ -1,63 +1,55 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    {{> head}}
-    <title>notchris - tcvs</title>
-  </head>
-  <body>
-    <div class="flex flex-col w-full min-h-full">
-      {{> header }} {{> projectHeader title="Acoustic Guitar" slug="guitar" }}
-      <div class="content-section flex-1 m-0! lg:m-auto! w-full">
-        <div class="w-full flex flex-col lg:flex-row justify-between gap-10">
-          <div
-            class="w-full flex flex-col gap-4 flex-1/3 lg:mb-20 order-1 lg:order-0"
-          >
-            <p class="source-sans text-lg">
-              As a musician, I always wanted to code something music related, so
-              I created a virtual Acoustic Guitar. The sounds are all
-              procedural, so there are no samples being used.
-            </p>
+<html lang='en'>
+	<head>
+		{{> head
+			title='Acoustic Guitar — notchris'
+			description='A virtual Acoustic Guitar made with Unity.'
+			canonical='https://notchris.net/projects/guitar/'
+		}}
+	</head>
+	<body>
+		<div class='flex flex-col w-full min-h-full'>
+			{{> header}}
+			{{> projectHeader
+				title="Acoustic Guitar"
+				slug="guitar"
+			}}
+			<div class='content-section flex-1 m-0! lg:m-auto! w-full'>
+				<div class='w-full flex flex-col lg:flex-row justify-between gap-10'>
+					<div class='w-full flex flex-col gap-4 flex-1/3 lg:mb-20 order-1 lg:order-0'>
+						<p class='source-sans text-lg'>
+							As a musician, I always wanted to code something music related, so I created a virtual Acoustic Guitar. The sounds are all procedural, so there are no samples being used.
+						</p>
 
-            <img class="w-full" src="/assets/guitar/guitar2.jpg" />
+						<img class='w-full' src='/assets/guitar/guitar2.jpg' />
 
-            <p class="source-sans text-lg">
-              You can visualize the structure of chords as they are played, edit
-              the library of chords, and even enable "autoplay" where a basic
-              strumming pattern is simulated.
-            </p>
-            <video controls class="w-full">
-              <source src="/assets/guitar/guitar_demo.mp4" type="video/mp4" />
-            </video>
+						<p class='source-sans text-lg'>
+							You can visualize the structure of chords as they are played, edit the library of chords, and even enable "autoplay" where a basic strumming pattern is simulated.
+						</p>
+						<video class='w-full' controls>
+							<source src='/assets/guitar/guitar_demo.mp4' type='video/mp4' />
+						</video>
 
-            <p class="source-sans text-lg">
-              I wanted to include an in-browser demo of the guitar, but there
-              isn't support for the <i>OnAudioFilterRead</i> API. I found a cool
-              third-party
-              <a
-                class="text-link"
-                href="https://github.com/RageAgainstThePixel/com.utilities.audio"
-                target="_blank"
-                >audio extension</a
-              >
-              for Unity that provides a <i>StreamAudioSource</i> component as a
-              workaround, but ran into a few issues (probably of my own doing).
-            </p>
-          </div>
-          <div class="w-full flex flex-col gap-10 flex-1">
-            <div
-              class="p-4 rounded border border-(--color-dark-gray) flex justify-center items-center"
-            >
-              <img
-                class="w-full max-w-3xs"
-                src="/assets/guitar/guitar_thumb.png"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-      {{> footer }}
-    </div>
+						<p class='source-sans text-lg'>
+							I wanted to include an in-browser demo of the guitar, but there isn't support for the
+							<i>OnAudioFilterRead</i>
+							API. I found a cool third-party
+							<a class='text-link' href='https://github.com/RageAgainstThePixel/com.utilities.audio' target='_blank'>audio extension</a>
+							for Unity that provides a
+							<i>StreamAudioSource</i>
+							component as a workaround, but ran into a few issues (probably of my own doing).
+						</p>
+					</div>
+					<div class='w-full flex flex-col gap-10 flex-1'>
+						<div class='p-4 rounded border border-(--color-dark-gray) flex justify-center items-center'>
+							<img class='w-full max-w-3xs' src='/assets/guitar/guitar_thumb.png' />
+						</div>
+					</div>
+				</div>
+			</div>
+			{{> footer}}
+		</div>
 
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+		<script type='module' src='/src/main.ts'></script>
+	</body>
 </html>

@@ -1,75 +1,58 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    {{> head}}
-    <title>notchris - tcvs</title>
-  </head>
-  <body>
-    <div class="flex flex-col w-full min-h-full">
-      {{> header }} {{> projectHeader title="Sliiime" slug="slime" }}
-      <div class="content-section flex-1 m-0! lg:m-auto! w-full">
-        <div class="w-full flex flex-col lg:flex-row justify-between gap-10">
-          <div
-            class="w-full flex flex-col gap-4 flex-1/3 lg:mb-20 order-1 lg:order-0"
-          >
-            <p class="source-sans text-lg">
-              <i>Sliiime</i> - is a 3D platformer where you play as a ...ball of
-              slime navigating puzzles of all varieties.
-            </p>
-            <img class="w-full" src="/assets/slime/slime_1.jpg" />
+<html lang='en'>
+	<head>
+		{{> head
+			title='Sliiime — notchris'
+			description='A 3D Unity game featuring a Slime.'
+			canonical='https://notchris.net/projects/slime/'
+		}}
+	</head>
+	<body>
+		<div class='flex flex-col w-full min-h-full'>
+			{{> header}}
+			{{> projectHeader
+				title="Sliiime"
+				slug="slime"
+			}}
+			<div class='content-section flex-1 m-0! lg:m-auto! w-full'>
+				<div class='w-full flex flex-col lg:flex-row justify-between gap-10'>
+					<div class='w-full flex flex-col gap-4 flex-1/3 lg:mb-20 order-1 lg:order-0'>
+						<p class='source-sans text-lg'><i>Sliiime</i> - is a 3D platformer where you play as a ...ball of slime navigating puzzles of all varieties.</p>
+						<img class='w-full' src='/assets/slime/slime_1.jpg' />
 
-            <p class="source-sans text-lg">
-              The project was used to experiment with soft-body physics systems.
-              It turns out making a semi-realistic slime is pretty challenging -
-              I went through a ton of iterations.
-            </p>
+						<p class='source-sans text-lg'>
+							The project was used to experiment with soft-body physics systems. It turns out making a semi-realistic slime is pretty challenging - I went through a ton of iterations.
+						</p>
 
-            <img class="w-full" src="/assets/slime/slimegif2.gif" />
+						<img class='w-full' src='/assets/slime/slimegif2.gif' />
 
-            <p class="source-sans text-lg">
-              When choosing a physics system, the main test was to see if the
-              slime would clip into other colliders, causing some of it's
-              vertices to get caught. In some cases, I tried resetting caught
-              vertices (by checking the distance from their current to base
-              position at the player position) - this sort of worked, but not
-              reliably enough for a good platformer.
-            </p>
+						<p class='source-sans text-lg'>
+							When choosing a physics system, the main test was to see if the slime would clip into other colliders, causing some of it's vertices to get caught. In some cases, I tried resetting caught vertices (by checking the distance from their current to base position at the player position) - this sort of worked, but not reliably enough for a good platformer.
+						</p>
 
-            <p class="source-sans text-lg">
-              I ended up simplifying the slime by creating small sets of sphere
-              bodies connected to each other, and to a central joint. This
-              improved performance and the overall feel of the slime.
-            </p>
+						<p class='source-sans text-lg'>
+							I ended up simplifying the slime by creating small sets of sphere bodies connected to each other, and to a central joint. This improved performance and the overall feel of the slime.
+						</p>
 
-            <img class="w-full" src="/assets/slime/slimegif1.gif" />
+						<img class='w-full' src='/assets/slime/slimegif1.gif' />
 
-            <p class="source-sans text-lg">
-              Some early demos of City and Floating Platform levels:
-            </p>
+						<p class='source-sans text-lg'>Some early demos of City and Floating Platform levels:</p>
 
-            <img class="w-full" src="/assets/slime/slime_2.png" />
-            <img class="w-full" src="/assets/slime/slime_3.png" />
+						<img class='w-full' src='/assets/slime/slime_2.png' />
+						<img class='w-full' src='/assets/slime/slime_3.png' />
 
-            <p class="source-sans text-lg">
-              Until I work out the physics issues, this is just a demo, but I'm
-              hoping to make a full release in the near future.
-            </p>
-          </div>
-          <div class="w-full flex flex-col gap-10 flex-1">
-            <div
-              class="p-4 rounded border border-(--color-dark-gray) flex justify-center items-center"
-            >
-              <img
-                class="w-full max-w-3xs"
-                src="/assets/slime/slimethumb.png"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-      {{> footer }}
-    </div>
+						<p class='source-sans text-lg'>Until I work out the physics issues, this is just a demo, but I'm hoping to make a full release in the near future.</p>
+					</div>
+					<div class='w-full flex flex-col gap-10 flex-1'>
+						<div class='p-4 rounded border border-(--color-dark-gray) flex justify-center items-center'>
+							<img class='w-full max-w-3xs' src='/assets/slime/slimethumb.png' />
+						</div>
+					</div>
+				</div>
+			</div>
+			{{> footer}}
+		</div>
 
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+		<script type='module' src='/src/main.ts'></script>
+	</body>
 </html>
