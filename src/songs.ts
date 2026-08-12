@@ -1,5 +1,3 @@
-import songData from './data/songs.json';
-
 interface Song {
     id: number;
     filename: string;
@@ -9,7 +7,15 @@ interface Song {
     info: string;
 }
 
-let songs: Song[] = songData;
+// load the list of songs in public dir
+const response = await fetch("/data/songs.json");
+
+if (!response.ok) {
+    throw new Error(`Error loading song list: ${response.status}`);
+}
+
+const songs: Song[] = await response.json();
+
 let selectedSong: Song | undefined;
 
 let sortColumn: keyof Song = "date";
@@ -46,7 +52,7 @@ const el = {
     songDownload: $<HTMLAnchorElement>("#song-download"),
 };
 
-// populate the initial table
+// populate the table
 populateStreamers();
 render();
 
