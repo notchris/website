@@ -1,0 +1,179 @@
+@import "tailwindcss";
+@source "./partials/**/*.hbs";
+@custom-variant dark (&:where(.dark, .dark *));
+
+html,
+body,
+#app,
+main {
+  width: 100%;
+  height: 100%;
+  color: var(--color-text);
+  font-family: "Source Sans 3", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 400;
+}
+
+body {
+  background: var(--color-background);
+}
+
+footer {
+  background-color: #222;
+  color: #f5f5f5;
+}
+
+select {
+  @apply bg-transparent;
+}
+
+img.pixelated {
+  image-rendering: pixelated;
+}
+
+.source-sans {
+  font-family: "Source Sans 3", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 400;
+}
+
+.source-sans-bold {
+  font-family: "Source Sans 3", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: bold;
+  font-variation-settings: "wdth" 800;
+}
+
+:root {
+  --color-light: #f5f5f5;
+  --color-gray: #ddd;
+  --color-divider: #ddd;
+  --color-light-gray: #f7f7f7;
+  --color-dark-gray: #bbb;
+  --color-dark: #222;
+  --color-twitch: #9147ff;
+
+  --color-border: var(--color-dark);
+  --color-background: var(--color-light);
+  --color-surface: var(--color-gray);
+
+  --color-text: #1f1f1f;
+  --color-text-muted: #5f6368;
+}
+
+.dark {
+  --color-light: #222;
+  --color-gray: #1e1e1e;
+  --color-dark-gray: #333;
+  --color-divider: #333;
+  --color-dark: #eee;
+
+  --color-border: var(--color-light);
+  --color-background: var(--color-light);
+  --color-surface: var(--color-gray);
+
+  --color-text: #ddd;
+  --color-text-muted: #aaa;
+}
+
+.navbar {
+  @apply flex gap-8 text-lg;
+}
+
+.content-title {
+  @apply max-w-full lg:max-w-5xl mx-auto pt-4 px-4 lg:px-0;
+}
+
+.content-section {
+  @apply max-w-full lg:max-w-5xl mx-auto py-4 px-4 lg:px-0;
+}
+
+.text-link {
+  @apply underline underline-offset-4 hover:opacity-50 transition-all;
+}
+
+.button {
+  @apply bg-(--color-dark) hover:opacity-50 disabled:opacity-50 disabled:cursor-default cursor-pointer text-(--color-light) font-bold py-2 px-4 rounded block text-center transition-all;
+}
+
+.button-outline {
+  @apply bg-transparent hover:bg-(--color-dark) hover:text-(--color-light) border border-(--color-dark)  disabled:opacity-50 disabled:cursor-default cursor-pointer text-(--color-dark) font-semibold py-2 px-4 rounded block text-center transition-all;
+}
+
+.button-outline img {
+  @apply min-w-5 max-w-6 max-h-5 w-full group-hover:invert-100 invert-0;
+}
+
+.nav-link-active {
+  @apply underline-offset-8 underline decoration-2 decoration-(--color-dark)!;
+}
+
+.nav-link {
+  @apply underline-offset-8 underline decoration-2 decoration-transparent transition-colors;
+}
+
+.nav-link:hover {
+  @apply underline-offset-8 underline decoration-2 decoration-(--color-dark);
+}
+
+.card {
+  @apply w-full h-full text-center flex items-center justify-center px-10 py-10 rounded border-4 hover:bg-(--color-dark-gray) bg-(--color-gray);
+}
+
+.audio-card {
+  @apply absolute z-1 font-bold text-2xl uppercase;
+}
+
+.social > a {
+  @apply opacity-100 hover:opacity-70 transition-all;
+}
+
+.social > a > img {
+  @apply min-w-8 max-w-8 max-h-8 w-full;
+}
+
+// Dark
+
+.dark .reverse {
+  @apply invert-100;
+}
+
+.dark audio {
+  @apply border-0;
+}
+
+.dark .unity {
+  @apply invert-100;
+}
+
+.dark .button-outline img {
+  @apply min-w-5 max-w-6 max-h-5 w-full group-hover:invert-0 invert-100;
+}
+
+.dark .logo {
+  @apply invert-100;
+}
+
+// Table
+
+table thead tr th,
+table tbody tr td {
+  @apply p-4;
+}
+
+table tbody tr:hover {
+  @apply bg-(--color-dark-gray)/60 cursor-pointer;
+}
+
+table tbody tr.selected {
+  @apply bg-(--color-dark-gray);
+}
+
+table tbody tr td {
+  @apply py-2;
+}

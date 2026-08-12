@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {{> head}}
+
+    <title>notchris - twitch clip song project</title>
+  </head>
+  <body>
+    <div class="flex flex-col w-full min-h-full">
+      {{> header }}
+      <div class="content-title text-center w-full">
+        <div class="px-0 py-4 flex flex-col gap-2">
+          <div class="text-3xl font-semibold">Twitch Clip Song Project</div>
+          <div class="w-full bg-(--color-divider) h-0.5 my-2"></div>
+          <p>
+            A collection of songs made using clips of Twitch streams.
+            <a href="twitch/about" class="text-link"
+              >Learn more</a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="content-section w-full">
+        <div class="w-full h-full flex flex-col gap-4 lg:flex-row">
+          <div
+            class="relative overflow-x-auto rounded border-4 w-full flex-1/3 order-2 lg:order-1"
+          >
+            <div class="flex flex-col gap-4 p-4">
+              <div class="flex flex-wrap gap-2">
+                <input
+                  id="song-search"
+                  type="search"
+                  placeholder="Search..."
+                  class="border border-(--color-divider) rounded px-3 py-2"
+                />
+
+                <select
+                  id="streamer-filter"
+                  class="border border-(--color-divider) rounded px-3 py-2"
+                >
+                  <option value="">All streamers</option>
+                </select>
+              </div>
+
+              <table id="songs-table" class="w-full"></table>
+            </div>
+          </div>
+
+  <div class="flex-1 order-1 lg:order-2 flex flex-col gap-4">
+    <div class="sticky top-4 flex flex-col gap-4">
+      <!-- Song panel -->
+      <div class="border-4 rounded p-4 w-full">
+        <div id="song-panel-empty" class="text-center">
+          Select a song from the list
+        </div>
+
+        <div id="song-panel-content" class="hidden flex-col gap-4">
+          <div id="song-title" class="text-2xl font-medium"></div>
+
+          <div id="song-date"></div>
+
+          <div>
+            <audio
+              id="song-audio"
+              class="border-4 rounded w-full min-w-40 block"
+              controls
+            ></audio>
+          </div>
+
+          <div class="flex gap-2 justify-between">
+            <div>
+              <a
+                id="song-twitch"
+                class="bg-(--color-twitch) hover:opacity-50 cursor-pointer text-white font-bold py-2 px-4 rounded w-fit flex gap-2 items-center"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M3.857 0 1 2.857v10.286h3.429V16l2.857-2.857H9.57L14.714 8V0zm9.714 7.429-2.285 2.285H9l-2 2v-2H4.429V1.143h9.142z"
+                  />
+                  <path
+                    d="M11.857 3.143h-1.143V6.57h1.143zm-3.143 0H7.571V6.57h1.143z"
+                  />
+                </svg>
+
+                <span id="song-twitch-name"></span>
+              </a>
+            </div>
+
+            <div>
+              <a
+                id="song-download"
+                class="button-outline"
+                href="#"
+                download
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M12 15V3" />
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                  <path d="m7 10 5 5 5-5" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- About panel -->
+      <div
+        class="border-4 rounded p-4 w-full flex flex-col gap-4 text-center"
+      >
+        <a
+          class="text-lg font-semibold underline underline-offset-4 hover:opacity-70"
+          href="twitch/about"
+        >
+          About / Commissions
+        </a>
+      </div>
+    </div>
+
+
+
+        </div>
+      </div>
+      {{> footer }}
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+    <script type="module" src="/src/songs.ts"></script>
+  </body>
+</html>

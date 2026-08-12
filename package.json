@@ -1,0 +1,27 @@
+{
+  "name": "notchris-website",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@poliklot/prettier-plugin-handlebars": "^0.3.4",
+    "@types/node": "^26.2.0",
+    "prettier": "^3.9.6",
+    "typescript": "~6.0.2",
+    "vite": "^8.2.0"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "@tanstack/table-core": "^9.1.2",
+    "tailwindcss": "^4.3.3",
+    "vite-plugin-handlebars": "^2.0.3"
+  },
+  "allowScripts": {
+    "fsevents@2.3.3": true
+  }
+}

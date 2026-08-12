@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50.31 54.19">
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <g>
+        <path d="m16.41,53.69h3.39v-22.82l-3.29-3.66c0,10.09-.1,16.46-.1,26.48Z" style="fill: #13f8e3; stroke-width: 0px;"/>
+        <polygon points="34.21 .5 30.94 .5 30.94 23.55 34.11 27.13 34.21 .5" style="fill: #fe3147; stroke-width: 0px;"/>
+      </g>
+      <rect x="48.51" y=".5" width="1.8" height="53.19" style="fill: #13f8e3; stroke-width: 0px;"/>
+      <polygon points="34.21 .5 30.94 .5 30.94 20.28 34.14 20.28 34.21 .5" style="fill: #fe3147; stroke-width: 0px;"/>
+    </g>
+    <path d="m.36,49.04L30.94.5H.36" style="fill: #fe3147; stroke-width: 0px;"/>
+    <g>
+      <g>
+        <polygon points="34.21 .5 34.54 .5 48.51 .5 48.51 53.69 40.31 53.69 34.21 46.9 34.11 27.13 34.14 21.05 34.21 .5" style="fill: #fff; stroke-width: 0px;"/>
+        <g>
+          <polyline points="34.19 6.5 34.21 .5 34.54 .5 40.21 .5" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+          <polyline points="42.51 .5 48.51 .5 48.51 6.5" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+          <line x1="48.51" y1="20.23" x2="48.51" y2="40.82" style="fill: none; stroke: #000; stroke-dasharray: 0 0 13.73 13.73; stroke-miterlimit: 10;"/>
+          <polyline points="48.51 47.69 48.51 53.69 40.31 53.69 36.3 49.23" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+          <polyline points="34.16 35.52 34.11 27.13 34.14 21.05 34.16 13.75" style="fill: none; stroke: #000; stroke-dasharray: 0 0 14.51 14.51; stroke-miterlimit: 10;"/>
+        </g>
+      </g>
+      <line x1="30.94" y1="23.55" x2="30.94" y2="43.26" style="stroke: #fff; stroke-miterlimit: 10; stroke-width: .25px;"/>
+      <polygon points="21.12 12.47 21.12 32.33 24.39 35.98 24.39 16.16 21.12 12.47" style="stroke-width: 0px;"/>
+    </g>
+    <polygon points="16.47 7.16 16.47 27.02 19.74 30.66 19.74 10.85 16.47 7.16" style="stroke-width: 0px;"/>
+    <polygon points="25.71 16.94 25.71 36.81 28.98 40.45 28.98 20.64 25.71 16.94" style="stroke-width: 0px;"/>
+    <polygon points="30.94 21.75 30.94 41.62 34.21 45.26 34.21 25.45 30.94 21.75" style="stroke-width: 0px;"/>
+    <rect x="13.57" y="7.16" width="1.27" height="46.53" style="stroke-width: 0px;"/>
+    <rect y="2.51" width="1.26" height="51.18" style="stroke-width: 0px;"/>
+  </g>
+</svg>

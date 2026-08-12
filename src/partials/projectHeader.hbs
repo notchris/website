@@ -1,0 +1,36 @@
+<div class='content-title text-left w-full'>
+	<div class='px-0 py-4 flex flex-col gap-4'>
+		<!-- breadcrumbs -->
+		<div class='flex gap-2 items-center text-sm mb-4'>
+			<a class='text-link' href='/projects'><span>Projects</span></a>
+
+			<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'>
+				<path d='m9 18 6-6-6-6'></path>
+			</svg>
+
+			<a class='text-link' href='/projects/{{ slug }}'><span>{{ title }}</span></a>
+		</div>
+
+		<!-- title -->
+		<div class='w-full flex justify-between items-center'>
+			<div class='text-3xl font-semibold'>{{ title }}</div>
+
+			<div class='flex gap-2'>
+				<!-- github -->
+
+				{{#if github}}
+					<a class='button-outline text-sm group max-h-fit' href='{{ github }}' target='_blank' rel='noopener noreferrer'>
+						<img src='/icons/github.svg' alt='GitHub' />
+					</a>
+				{{/if}}
+
+				<!-- website -->
+				{{#if website}}
+					<a class='button-outline text-sm max-h-fit' href='{{ website }}' target='_blank' rel='noopener noreferrer'>Project&nbsp;Website</a>
+				{{/if}}
+			</div>
+		</div>
+
+		<div class='w-full bg-(--color-divider) h-0.5'></div>
+	</div>
+</div>

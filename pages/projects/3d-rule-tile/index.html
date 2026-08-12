@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {{> head}}
+    <title>notchris - tcvs</title>
+  </head>
+  <body>
+    <div class="flex flex-col w-full min-h-full">
+      {{> header }} {{> projectHeader title="Unity 3D Rule Tile"
+      slug="3d-rule-tile" }}
+      <div class="content-section flex-1 m-0! lg:m-auto! w-full">
+        <div class="w-full flex flex-col lg:flex-row justify-between gap-10">
+          <div
+            class="w-full flex flex-col gap-4 flex-1/3 lg:mb-20 order-1 lg:order-0"
+          >
+            <p class="source-sans text-lg">
+              Unity 6.4 has a 2D package that provides tilemap features, but I
+              wanted to create a 3D Rule Tile system similar to
+              <i>Animal Crossing: New Horizons</i> where neighboring tiles are
+              affected by placement. This allows you to implement live
+              terraforming, NavAgent features, multiple height levels, and more!
+            </p>
+
+            <p class="source-sans text-lg">
+              There are a few standard tileset types, some of which re-use tiles
+              to have a smaller tile count. For this project I am using the
+              47-tile
+              <a
+                target="_blank"
+                class="text-link"
+                href="https://www.boristhebrave.com/permanent/24/06/cr31/stagecast/wang/blob.html"
+                >Blob Tileset</a
+              >. This wasn't ideal because each tile needed to be setup
+              correctly in Blender, but Unity's RuleTile rotation feature does
+              not allow for prefab rotations. If it did, we could accomplish the
+              same result with only 16 tiles.
+            </p>
+
+            <p class="source-sans text-lg">
+              You can extend the base
+              <a
+                class="text-link"
+                target="_blank"
+                href="https://docs.unity3d.com/Packages/com.unity.2d.tilemap.extras@1.6/manual/CustomRulesForRuleTile.html"
+                >RuleTile</a
+              >
+              class to manually configure rule behavior, but I did not see a way
+              to access the prefab.
+            </p>
+
+            <p class="source-sans-medium text-lg font-normal">
+              Here are some visuals of the setup and result:
+            </p>
+
+            <p class="source-sans font-normal">
+              Painting and erasing 3D tiles in the Unity Editor.
+            </p>
+            <img
+              class="w-full"
+              src="/assets/3druletiles/ruletile_example.gif"
+            />
+
+            <p class="source-sans font-normal">
+              A more polished demo in a cozy island environment.
+            </p>
+            <img
+              class="w-full"
+              src="/assets/3druletiles/ruletile_example2.gif"
+            />
+
+            <p class="source-sans font-normal">
+              Renders of the tileset in Blender. We remove interior faces and
+              add a duplicated "top" face for the NavMesh.
+            </p>
+            <div class="grid grid-cols-2 gap-2">
+              <img class="w-full" src="/assets/3druletiles/Render1.png" />
+              <img class="w-full" src="/assets/3druletiles/Render2.png" />
+            </div>
+
+            <img class="w-full" src="/assets/3druletiles/Render3.png" />
+
+            <div class="grid grid-cols-2 gap-2">
+              <img class="w-full" src="/assets/3druletiles/sideview_1.png" />
+
+              <img class="w-full" src="/assets/3druletiles/sideview_2.png" />
+            </div>
+
+            <p class="source-sans text-lg font-normal">
+              After drawing tiles, you can Bake the NavMesh. Assuming the models
+              are imported, have prefab variants, and have NavMesh planes set to
+              a 'Navmesh' layer, baking will collect all of the 'top faces' from
+              the tiles and generate the walkable area.
+            </p>
+            <p class="source-sans text-lg font-normal">
+              If you're continuously editing and re-baking your NavMesh, you can
+              write a small utility script to toggle the visibility of the
+              individual NavMesh objects in bulk. This is useful because Unity
+              will only generate the NavMesh from visible objects. However, you
+              can also change the NavMesh to use Collision Objects instead of
+              Render Meshes, which may allow you to omit the Mesh Renderer
+              component.
+            </p>
+            <img class="w-full" src="/assets/3druletiles/overhead_1.png" />
+            <img class="w-full" src="/assets/3druletiles/overhead_2.png" />
+            <div class="w-full bg-(--color-divider) h-0.5"></div>
+            <p class="source-sans text-lg font-normal">
+              Interested in trying out this tile system? I'm planning on
+              releasing it on GitHub and the Unity Asset Store, so until then -
+              <a class="text-link" href="mailto@notchris.other@gmail.com"
+                >send me an email</a
+              >!
+            </p>
+          </div>
+          <div class="w-full flex flex-col gap-10 flex-1">
+            <div
+              class="p-4 rounded border border-(--color-dark-gray) flex justify-center items-center"
+            >
+              <img
+                class="w-full max-w-3xs unity"
+                src="/assets/3druletiles/unitylogo.png"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      {{> footer }}
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

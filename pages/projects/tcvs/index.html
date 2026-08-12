@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {{> head}}
+    <title>notchris - tcvs</title>
+  </head>
+  <body>
+    <div class="flex flex-col w-full min-h-full">
+      {{> header }} {{> projectHeader title="Twitch Chat Voice Synthesis"
+      slug="tcvs" website="https://notchris.net/tcvs/"
+      github="https://github.com/notchris/tcvs" }}
+      <div class="content-section flex-1 m-0! lg:m-auto! w-full">
+        <div class="w-full flex flex-col lg:flex-row justify-between gap-10">
+          <div
+            class="w-full flex flex-col gap-4 flex-1/3 lg:mb-20 order-1 lg:order-0"
+          >
+            <p class="source-sans text-lg">
+              In 2022, I created
+              <span class="font-semibold"
+                >TCVS (Twich Chat Voice Synthesis) - a free and open-source TTS
+                solution for Twitch</span
+              >. The app uses the browser Speech API to read user messages live.
+            </p>
+
+            <p class="source-sans text-lg">
+              TCVS is used by streamers who want to broadcast chat messages to
+              all users, and also by users who want to keep up with chat without
+              having to read messages. Messages are read in sequence and can be
+              filtered by user.
+            </p>
+
+            <p class="source-sans text-lg">
+              If you're interested - check out the
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API"
+                class="text-link"
+                target="_blank"
+                >Web Speech API</a
+              >. The available voices depend on a few factors, but modern
+              browsers should provide a large amount of voices. You can also
+              change a few parameters on voices like rate, pitch, and volume.
+            </p>
+
+            <a class="button" target="_blank" href="https://notchris.net/tcvs"
+              >Try it out</a
+            >
+
+            <img class="w-full" src="/assets/tcvs/tcvs2.png" />
+          </div>
+          <div class="w-full flex flex-col gap-10 flex-1">
+            <div
+              class="p-4 rounded border border-(--color-dark-gray) flex justify-center items-center"
+            >
+              <img
+                class="w-full max-w-2xs lg:max-w-3xs"
+                src="/assets/tcvs/tcvsthumb.png"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      {{> footer }}
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {{> head}}
+
+    <title>notchris - audio</title>
+  </head>
+  <body>
+    <div class="flex flex-col w-full min-h-full">
+      {{> header }} {{> pageHeader title="Audio Projects"}}
+      <div class="content-section h-full mb-20">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-10 gap-4"
+        >
+          <a class="card relative" href="/audio/twitch">
+            <div class="audio-card source-sans-bold">
+              Twitch Clip<br />Song Project
+            </div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              class="relative opacity-10 max-w-[80%]"
+              role="img"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M3.857 0 1 2.857v10.286h3.429V16l2.857-2.857H9.57L14.714 8V0zm9.714 7.429-2.285 2.285H9l-2 2v-2H4.429V1.143h9.142z"
+              />
+              <path
+                d="M11.857 3.143h-1.143V6.57h1.143zm-3.143 0H7.571V6.57h1.143z"
+              />
+            </svg>
+          </a>
+          <a
+            target="_blank"
+            class="card relative"
+            href="https://www.youtube.com/@ntvmashups"
+          >
+            <div class="audio-card source-sans-bold">
+              notchris /<br />Will Dani<br />Mashups
+            </div>
+            <img
+              src="/images/NTV_Transparent.png"
+              class="relative w-fit opacity-10 reverse"
+            />
+          </a>
+          <a
+            target="_blank"
+            class="card relative"
+            href="https://graziemille.bandcamp.com"
+          >
+            <div class="audio-card source-sans-bold">Grazie<br />Mille</div>
+            <img
+              src="/images/grazie.jpg"
+              class="relative w-fit opacity-10 reverse"
+            />
+          </a>
+          <a
+            href="https://soundcloud.com/notchr_is"
+            target="_blank"
+            class="card relative"
+          >
+            <div class="audio-card source-sans-bold">notchris</div>
+            <img src="/nclogo.svg" class="relative w-fit opacity-10 reverse" />
+          </a>
+          <a class="card relative" href="/audio/twitch">
+            <div class="audio-card source-sans-bold">
+              OSRS<br />Mashup<br />Project
+            </div>
+            <img
+              src="/icons/osrs.png"
+              class="relative w-fit opacity-10 reverse"
+            />
+          </a>
+        </div>
+      </div>
+      {{> footer }}
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

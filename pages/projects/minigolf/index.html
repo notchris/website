@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {{> head}}
+    <title>notchris - tcvs</title>
+  </head>
+  <body>
+    <div class="flex flex-col w-full min-h-full">
+      {{> header }} {{> projectHeader title="MiniGolf 3D" slug="minigolf"
+      website="https://notcorp.itch.io/3d-minigolf-course-builder" }}
+      <div class="content-section flex-1 m-0! lg:m-auto! w-full">
+        <div class="w-full flex flex-col lg:flex-row justify-between gap-10">
+          <div
+            class="w-full flex flex-col gap-4 flex-1/3 lg:mb-20 order-1 lg:order-0"
+          >
+            <p class="source-sans text-lg">
+              There are a million mini golf games, but probably a lot less mini
+              golf course builders - and that's exactly what this is!
+            </p>
+
+            <a
+              target="_blank"
+              href="https://notcorp.itch.io/3d-minigolf-course-builder"
+              class="button mb-5"
+            >
+              Try it in your browser!
+            </a>
+
+            <p class="source-sans text-lg">
+              I was making modular asset packs that I could easily import into
+              Unity and thought it would be fun to make a MiniGolf set. I used
+              Blender to create the models, and each model has simplified
+              collision shapes for physics.
+            </p>
+
+            <img class="w-full" src="/assets/minigolf/GolfModels_1.png" />
+
+            <p class="source-sans text-lg">
+              The editor supports tile rotation and elevation, and you can also
+              pan and rotate the camera. The desktop version of the editor
+              supports saving and loading courses via JSON.
+            </p>
+
+            <img class="w-full" src="/assets/minigolf/editorgif1.gif" />
+            <img class="w-full" src="/assets/minigolf/editorgif2.gif" />
+
+            <p class="source-sans text-lg">
+              Once the Hole and Tee are placed, you can test the course. The
+              physics in the demo are very basic, but you can drag & shoot the
+              ball with your mouse.
+            </p>
+
+            <img class="w-full" src="/assets/minigolf/editorgif3.gif" />
+          </div>
+          <div class="w-full flex flex-col gap-10 flex-1">
+            <div
+              class="p-4 rounded border border-(--color-dark-gray) flex justify-center items-center"
+            >
+              <img
+                class="w-full max-w-3xs"
+                src="/assets/minigolf/minigolfcover.png"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      {{> footer }}
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

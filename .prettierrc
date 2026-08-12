@@ -1,0 +1,16 @@
+{
+  "plugins": ["@poliklot/prettier-plugin-handlebars"],
+  "overrides": [
+    {
+      "files": ["*.html", "*.hbs", "*.handlebars"],
+      "options": {
+        "parser": "handlebars",
+        "printWidth": 200,
+        "useTabs": true,
+        "tabWidth": 4,
+        "singleQuote": true,
+        "htmlWhitespaceSensitivity": "ignore"
+      }
+    }
+  ]
+}

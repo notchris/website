@@ -1,0 +1,52 @@
+<div class='w-full'>
+	<a class='group' href='{{ slug }}'>
+
+		<div
+			class='
+				border
+				border-(--color-dark-gray)
+				rounded
+				w-full
+				h-full
+				flex
+				flex-col
+				md:flex-row
+				gap-4
+				p-4
+				group-hover:border-white/50
+				transition-all
+			'
+		>
+
+			<div
+				class='
+					bg-cover
+					bg-center
+					w-full
+					md:w-2xs
+					h-auto
+					min-h-48
+					rounded
+					hover:opacity-70
+					opacity-100
+					transition-all
+				'
+				style="background-image: url('{{ thumb }}')"
+			></div>
+			<div class='flex-1 w-full flex flex-col gap-4'>
+				<div class='w-full flex justify-between items-center'>
+					<div class='text-xl font-semibold'>{{ title }}</div>
+					<div class='button-outline w-fit text-sm'>View Project</div>
+				</div>
+				<p>
+					{{#if @partial-block}}
+						{{> @partial-block}}
+					{{else}}
+						{{ description }}
+					{{/if}}
+				</p>
+			</div>
+		</div>
+
+	</a>
+</div>

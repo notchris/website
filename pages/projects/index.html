@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang='en'>
+	<head>
+		{{> head
+			title='Projects — notchris'
+			description='Projects, experiments, and thoughts by notchris.'
+			canonical='https://notchris.net/projects/'
+		}}
+	</head>
+
+	<body>
+		<div class='flex flex-col w-full min-h-full'>
+			{{> header}}
+			{{> pageHeader
+				title="Projects"
+			}}
+			<div class='content-section w-full h-full mb-20'>
+				<div class='flex flex-col gap-10 justify-start w-full'>
+					<!-- TCVS-->
+					{{#> projectCard title="Twitch Chat Voice Synthesis" thumb="/assets/tcvs/tcvsthumb.png" slug="tcvs"}}
+						TCVS is an open-source Text-To-Speech tool that reads messages from live Twitch Streams using the browsers Web Speech API. You can filter users and messages, assign unique voices per-user, and more.
+					{{/projectCard}}
+
+					<!-- Rule Tile -->
+					{{#> projectCard title="Unity 3D Rule Tile" thumb="/assets/3druletiles/ruletile_example.gif" slug="3d-rule-tile"}}
+						An experiment with Unity 6.4 to create a 3D Rule Tile system, allowing users to paint seamless 3D tilemaps with an auto-generated NavMesh Surface.
+					{{/projectCard}}
+
+					<!-- Campfire -->
+					{{#> projectCard title="Campfire" thumb="/assets/campfire/campfire_vid1.gif" slug="campfire"}}
+						Campfire is a 3D 'cozy' game concept I built to learn more about the Unity Engine. It showcases event-driven interaction, navigation, and inventory systems.
+					{{/projectCard}}
+
+					<!-- MiniGolf -->
+					{{#> projectCard title="MiniGolf Course Builder" thumb="/assets/minigolf/minigolf2.png" slug="minigolf"}}
+						Inspired by the 'Tycoon' games object placement systems, I created a 3D MiniGolf course editor. The modular parts were made in Blender, and the editor supports saving / loading course JSON files. You can also test courses as you build them.
+					{{/projectCard}}
+
+					<!-- Guitar -->
+					{{#> projectCard title="Acoustic Guitar" thumb="/assets/guitar/guitar1.jpg" slug="guitar"}}
+						I created a functioning acoustic guitar in Unity that allows you to visualize chord structures. The sounds are procedurally generated, so it uses no audio samples.
+					{{/projectCard}}
+
+					<!-- Slime -->
+					{{#> projectCard title="Sliiime" thumb="/assets/slime/slimethumb.png" slug="slime"}}
+						Sliiime is a 3D Katamari-like platformer where you play as an expanding slime ball. The project showcases a Soft Body Physics system that allows for unique player mechanics.
+					{{/projectCard}}
+				</div>
+			</div>
+			{{> footer}}
+		</div>
+		<script type='module' src='/src/main.ts'></script>
+	</body>
+</html>
