@@ -85,6 +85,20 @@ function getPageInputs(): Record<string, string> {
     };
 }
 
+function removeJSON(): Plugin {
+    return {
+        name: "remove-songs-json",
+        apply: "build",
+
+        async closeBundle() {
+            await fs.rm(
+                resolve(import.meta.dirname, "dist/data"),
+                { recursive: true, force: true },
+            );
+        }
+    };
+}
+
 function rewriteURLs(): Plugin {
     return {
         name: "clean-url-pages",
@@ -148,7 +162,6 @@ function rewriteURLs(): Plugin {
 export default defineConfig({
     plugins: [
         tailwindcss(),
-
         handlebars({
             partialDirectory: resolve(
                 import.meta.dirname,
@@ -173,11 +186,12 @@ export default defineConfig({
         }),
 
         rewriteURLs(),
+        removeJSON()
     ],
 
     build: {
         rollupOptions: {
-            input: getPageInputs(),
+            input: getPageInputs()
         },
     },
 });
