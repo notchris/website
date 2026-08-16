@@ -98,7 +98,7 @@ img.pixelated {
 }
 
 .navbar {
-  @apply flex gap-8 text-lg;
+  @apply flex gap-8 lg:text-lg;
 }
 
 .content-title {

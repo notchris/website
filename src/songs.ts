@@ -182,6 +182,15 @@ function updateSongPanel() {
         )}`;
 
     el.songAudio.src = audioUrl;
+
+    el.songAudio.addEventListener(
+        "canplay",
+        () => {
+            el.songAudio.play().catch(console.error);
+        },
+        { once: true },
+    );
+
     el.songAudio.load();
 
     // twitch
@@ -215,7 +224,7 @@ function render() {
 
     addHeader(headerRow, "Name", "name");
     addHeader(headerRow, "Streamer", "streamer");
-    addHeader(headerRow, "Date", "date");
+    addHeader(headerRow, "Date", "date", ["hidden", "lg:block"]);
 
     // listen header
     const listenHeader = document.createElement("th");
@@ -243,7 +252,7 @@ function render() {
             row,
             song.streamer.toUpperCase() || "-",
         );
-        addCell(row, song.date);
+        addCell(row, song.date, ["hidden", "lg:block"]);
 
         // listen
         const listenCell = document.createElement("td");
@@ -276,8 +285,10 @@ function addHeader(
     row: HTMLTableRowElement,
     label: string,
     column: keyof Song,
+    classes?: string[]
 ) {
     const th = document.createElement("th");
+    th.classList.add(...classes || []);
 
     const button = document.createElement("button");
 
@@ -310,8 +321,10 @@ function addHeader(
 function addCell(
     row: HTMLTableRowElement,
     value: string,
+    classes?: string[]
 ) {
     const td = document.createElement("td");
+    td.classList.add(...classes || []);
     td.textContent = value;
     row.appendChild(td);
 }
