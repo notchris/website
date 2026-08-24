@@ -33,6 +33,9 @@ const pageData: Record<string, PageData> = {
     "/projects/slime/index.html": {
         title: "Sliiime",
     },
+    "/projects/construct/index.html": {
+        title: "Construct",
+    },
     "/audio/index.html": {
         title: "Audio",
     },
@@ -50,9 +53,12 @@ const pageData: Record<string, PageData> = {
 function getPageInputs(): Record<string, string> {
     return {
         main: resolve(import.meta.dirname, "index.html"),
-
         projects: resolve(pagesDir, "projects/index.html"),
         "projects/tcvs": resolve(pagesDir, "projects/tcvs/index.html"),
+        "projects/construct": resolve(
+            pagesDir,
+            "projects/construct/index.html",
+        ),
         "projects/3d-rule-tile": resolve(
             pagesDir,
             "projects/3d-rule-tile/index.html",
@@ -73,7 +79,7 @@ function getPageInputs(): Record<string, string> {
             pagesDir,
             "projects/slime/index.html",
         ),
-
+        art: resolve(pagesDir, "art/index.html"),
         audio: resolve(pagesDir, "audio/index.html"),
         "audio/twitch": resolve(pagesDir, "audio/twitch/index.html"),
         "audio/twitch/about": resolve(

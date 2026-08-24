@@ -189,3 +189,42 @@ table tbody tr.selected {
 table tbody tr td {
   @apply py-2;
 }
+
+/** Modal **/
+
+.modal {
+  @apply bg-black/50 top-0 left-0 w-screen h-screen m-0 p-10 rounded;
+}
+
+.modal > div {
+  @apply bg-(--color-light) rounded;
+}
+
+.modal-content {
+  @apply flex flex-col items-center justify-center h-fit flex-1 p-4;
+}
+
+dialog {
+  @apply hidden;
+}
+
+dialog:open {
+  @apply flex items-center justify-center;
+}
+
+.open-modal {
+  cursor: pointer;
+}
+
+.open-modal > img {
+  @apply max-w-4xl w-full hover:opacity-70 transition-all opacity-100;
+}
+
+dialog:-internal-dialog-in-top-layer {
+  max-width: 100% !important;
+  max-height: 100% !important;
+}
+
+.item {
+  @apply w-full flex items-center justify-center;
+}

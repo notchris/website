@@ -10,6 +10,7 @@
   },
   "devDependencies": {
     "@poliklot/prettier-plugin-handlebars": "^0.3.4",
+    "@types/basiclightbox": "^5.0.4",
     "@types/node": "^26.2.0",
     "prettier": "^3.9.6",
     "typescript": "~6.0.2",

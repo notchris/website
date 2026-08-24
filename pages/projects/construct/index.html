@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang='en'>
+	<head>
+		{{> head
+			title='Construct — notchris'
+			description='Construct - Art series by notchris.'
+			canonical='https://notchris.net/construct-art/'
+		}}
+	</head>
+
+	<body>
+		<div class='flex flex-col w-full min-h-full'>
+			{{> header}}
+			{{> projectHeader
+				title="Art Series: Construct"
+				slug="construct"
+			}}
+			<div class='content-section w-full h-full mb-20'>
+				<div class='flex flex-col gap-10 justify-start w-full'>
+					<!-- Title -->
+					<div class='w-full'>
+						<p class='text-lg font-normal leading-lg'>
+							<span>
+								<i>Construct</i>
+								is an art series with "creation / destruction" as the theme. Stylistically, I wanted to experiment with mixing grunge and minimalism by adding small hints of distress either with brushes or procedural noise. The pieces were designed and animated in
+								<i>Blender</i>
+								. Each piece in the series uses modifiers and shader magic to manipulate geometry in interesting ways.
+								<br />
+								<br />
+								When creating this series, I was inspired by the work of
+								<a class='text-link' target='_blank' href='https://www.misprintedtype.com/'>Eduardo Recife</a>
+								and
+								<a class='text-link' target='_blank' href='https://www.aeriform.io/'>Aeriform</a>.
+							</span>
+						</p>
+					</div>
+
+					<section class='w-full'>
+
+						<div class='w-full grid grid-cols-2 gap-4'>
+							<div class='item'>
+								<button class='open-modal' type='button' command='show-modal' commandfor='modal'>
+									<img alt='Art Piece: Terraform' data-dlightbox src='/images/art/Terraform.gif' />
+								</button>
+							</div>
+							<div class='item'>
+								<button class='open-modal' type='button' command='show-modal' commandfor='modal'>
+									<img class='max-w-2xl w-full' alt='Art Piece: Rust' src='/images/art/Construct11.gif' />
+								</button>
+							</div>
+							<div class='item'>
+								<button class='open-modal' type='button' command='show-modal' commandfor='modal'>
+									<img class='max-w-2xl w-full' alt='Art Piece: Epitomb' src='/images/art/Epitomb.gif' />
+								</button>
+							</div>
+							<div class='item'>
+								<button class='open-modal' type='button' command='show-modal' commandfor='modal'>
+									<img class='max-w-2xl w-full' alt='Art Piece: Augury' src='/images/art/Augury.gif' />
+								</button>
+							</div>
+							<div class='item'>
+								<button class='open-modal' type='button' command='show-modal' commandfor='modal'>
+									<img class='max-w-2xl w-full' alt='Art Piece: Consume' src='/images/art/Consume.gif' />
+								</button>
+							</div>
+							<div class='item'>
+								<button class='open-modal' type='button' command='show-modal' commandfor='modal'>
+									<img class='max-w-2xl w-full' alt='Art Piece: Transmission' src='/images/art/Lunar_1.gif' />
+								</button>
+							</div>
+							<div class='item'>
+								<button class='open-modal' type='button' command='show-modal' commandfor='modal'>
+									<img class='max-w-2xl w-full' alt='Art Piece: Matter' src='/images/art/Values_4.gif' />
+								</button>
+							</div>
+						</div>
+					</section>
+
+				</div>
+			</div>
+			{{> footer}}
+		</div>
+
+		<dialog id='modal' class='modal'>
+			<div class='w-full h-full rounded-lg flex flex-col'>
+				<div class='w-full flex justify-end items-center p-4'>
+					<button class='button button-outline' commandfor='modal' command='close'>
+						<svg
+							xmlns='http://www.w3.org/2000/svg'
+							width='24'
+							height='24'
+							viewBox='0 0 24 24'
+							fill='none'
+							stroke='currentColor'
+							stroke-width='2'
+							stroke-linecap='round'
+							stroke-linejoin='round'
+						>
+							<path d='M18 6 6 18' />
+							<path d='m6 6 12 12' />
+						</svg>
+					</button>
+				</div>
+				<div class='modal-content'>
+					<img class='w-full max-w-3xl pointer-events-none select-none' src='' />
+				</div>
+			</div>
+		</dialog>
+
+		<script type='module' src='/src/main.ts'></script>
+		<script type='module' src='/src/lightbox.ts'></script>
+	</body>
+</html>
