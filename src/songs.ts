@@ -166,9 +166,12 @@ function updateSongPanel() {
     el.songTitle.textContent =
         `${streamerName}${selectedSong.name}`;
 
-    // date (note: fix this, the date is a day behind)
+    const date = selectedSong.date.split("T")[0].split("-");
+
     el.songDate.textContent = `Created on ${new Date(
-        selectedSong.date,
+        Number(date[0]),
+        Number(date[1]) - 1,
+        Number(date[2]),
     ).toLocaleDateString("en-US", {
         month: "long",
         day: "numeric",
