@@ -79,7 +79,7 @@ function getPageInputs(): Record<string, string> {
             pagesDir,
             "projects/slime/index.html",
         ),
-        art: resolve(pagesDir, "art/index.html"),
+
         audio: resolve(pagesDir, "audio/index.html"),
         "audio/twitch": resolve(pagesDir, "audio/twitch/index.html"),
         "audio/twitch/about": resolve(
