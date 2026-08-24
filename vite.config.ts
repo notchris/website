@@ -118,8 +118,6 @@ function rewriteURLs(): Plugin {
 
                 const url = new URL(req.url, "http://localhost");
                 let pathname = url.pathname;
-
-                // ignore files/assets.
                 if (
                     pathname.includes(".") ||
                     pathname.startsWith("/src/") ||
@@ -129,25 +127,34 @@ function rewriteURLs(): Plugin {
                     return;
                 }
 
-                // for dev
-                if (!pathname.endsWith("/")) {
-                    pathname += "/";
-                }
-
-                const htmlPath = resolve(
+                const hadTrailingSlash = pathname.endsWith("/");
+                const directoryPath = resolve(
                     pagesDir,
-                    `.${pathname}index.html`,
+                    `.${pathname}/index.html`,
                 );
 
                 try {
-                    await fs.access(htmlPath);
+                    await fs.access(directoryPath);
                 } catch {
                     next();
                     return;
                 }
 
+                if (!hadTrailingSlash) {
+                    res.statusCode = 301;
+                    res.setHeader(
+                        "Location",
+                        `${pathname}/${url.search}`,
+                    );
+                    res.end();
+                    return;
+                }
+
                 try {
-                    const html = await fs.readFile(htmlPath, "utf-8");
+                    const html = await fs.readFile(
+                        directoryPath,
+                        "utf-8",
+                    );
 
                     const transformed = await server.transformIndexHtml(
                         pathname,
